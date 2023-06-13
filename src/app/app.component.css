@@ -1,0 +1,14 @@
+.box {
+  height: 200px;
+  width: 200px;
+  overflow: auto;
+  background: rgb(82, 4, 4);
+  color: aliceblue;
+}
+
+#titutlo{
+  color: rgb(2, 2, 86);
+  text-decoration: underline;
+  font-weight: 1200;
+}
+
