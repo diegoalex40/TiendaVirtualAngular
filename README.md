@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # TiendaVirtual
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.4.
@@ -25,3 +26,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+=======
+# TiendaVirtualAngular
+Tienda Virtual de productos Automotrices, usando Angular
+![image](https://github.com/diegoalex40/TiendaVirtualAngular/assets/38218365/45980b48-9faf-44e9-8225-fca231dde239)
+>>>>>>> 8c0ca6e43eba57b30a216c0a685ee7dba1674b6d
