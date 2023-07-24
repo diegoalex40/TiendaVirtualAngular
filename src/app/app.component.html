@@ -1,3 +1,87 @@
+<h1 id="titutlo">FORMULARIOS BASICOS EN ANGULAR</h1>
+<form (ngSubmit)="onRegister()" #myForm="ngForm">
+  <div>
+    <label for="name">Nombre</label>
+    <input type="text" placeholder="Ingrese su nombre..." #formName="ngModel" name="name" [(ngModel)]="form.name" required>
+    <p class="message-error" [class.invalid]="formName.invalid">Mensaje de Error</p>
+  </div>
+  <div>
+    <label for="email">Email</label>
+    <input placeholder="Ingrese su mail..." #formEmail="ngModel" type="email" name="email" [(ngModel)]="form.email" required>
+    <p class="message-error" [class.invalid]="formEmail.invalid">Mensaje de Error</p>
+  </div>
+  <div>
+    <label for="password">Password</label>
+    <input min="3" max="10" placeholder="Maximo 10 caracteres" #formPassword="ngModel"type="password" name="password" [(ngModel)]="form.password" required>
+    <p class="message-error" [class.invalid]="formPassword.invalid">Mensaje de Error</p>
+  </div>
+  <div>
+    <button type="submit" [disabled]="myForm.invalid">Registrarse</button>
+    <button type="button">Accion</button>
+  </div>
+</form>
+
+<hr>
+<h1 id="titutlo">ESTILOS EN ANGULAR</h1>
+<hr>
+<h2>NGCLASS & NGSTYLE</h2>
+
+<h3>ngClass</h3>
+<input type="text" required #nameInput3="ngModel" [(ngModel)]="nombre"/>
+<hr class="line-error"
+[ngClass]="{
+  'valid':nameInput3.valid,
+  'invalid': nameInput3.invalid
+  }">
+<p class="message-error" [class.invalid]="nameInput.invalid" >
+  Este campo es requerido
+</p>
+<hr class="line-error"
+[ngClass]="{
+  'valid':nameInput3.valid,
+  'invalid': nameInput3.invalid
+  }">
+<hr>
+<h3>ngStyle</h3>
+<div class="styles">
+  <div>
+    <input type="number" [(ngModel)]="box.width">
+    <input type="number" [(ngModel)]="box.height">
+    <input type="color" [(ngModel)]="box.background">
+  </div>
+  <div [ngStyle]="{
+    'width.px':box.width,
+    'height.px':box.height,
+    'background-color':box.background,
+    'display': 'block'
+  }">
+  </div>
+</div>
+
+<h2>CLASS & STYLE</h2>
+<h3>CLASS</h3>
+<input type="text" required #nameInput="ngModel" [(ngModel)]="nombre"/>
+<p class="message-error" [class.invalid]="nameInput.invalid" >
+  Este campo es requerido
+</p>
+<p>Valid: {{nameInput.valid}}</p>
+<h3>Style</h3>
+<label>Nombre</label>
+<input type="text" required #nameInput2="ngModel" [(ngModel)]="nombre"/>
+<p [style.font-style]="nameInput2.invalid ? 'italic' : 'normal'">
+  Texto TExto texto texto Lorem
+</p>
+<hr>
+<div class="styles">
+  <div>
+    <input type="text" [(ngModel)]="widthImg">
+  </div>
+  <div>
+    <img [style.width.px]="widthImg" [src]="person.avatar" alt="Imagen"/>
+  </div>
+</div>
+
+<hr>
 <h1 id="titutlo">ESTRUCTURAS DE CONTROL</h1>
 <hr>
 <h2>ngSwitch</h2>
@@ -16,11 +100,11 @@
 <hr>
 <h2>*ngFor Aplicado a Objetos</h2>
 
-<div>
+<div class="products--grid">
   <div *ngFor="let producto of products">
     <p>{{producto.name}}</p>
     <p>{{producto.price}}</p>
-    <img height="200" width="200" src="{{producto.image}}" alt="">
+    <img width="200px" height="200px" src="{{producto.image}}" alt="">
     <p>Comentario: {{producto.comentario}}</p>
   </div>
 </div>

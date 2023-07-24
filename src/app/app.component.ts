@@ -13,6 +13,19 @@ export class AppComponent {
   img = "https://source.unsplash.com/random";
   habilitado = false;
   ejemplo = "";
+  widthImg ="50";
+
+  form = {
+    name: "",
+    email: "",
+    password: "",
+  }
+
+  box = {
+    width : "100",
+    height : "100",
+    background : "red"
+  }
 
   products: Producto[]= [
     {
@@ -61,6 +74,21 @@ export class AppComponent {
       price: 500,
       image: "./assets/imagen/producto9.jpg",
     },
+    {
+      name: "Aceite T2",
+      price: 42,
+      image: "./assets/imagen/producto2.webp",
+    },
+    {
+      name: "Aceite T2",
+      price: 42,
+      image: "./assets/imagen/producto2.webp",
+    },
+    {
+      name: "Aceite T2",
+      price: 42,
+      image: "./assets/imagen/producto2.webp",
+    },
   ]
 
 
@@ -101,5 +129,9 @@ export class AppComponent {
 
   borrarChocolate(index:number){
     this.chocolates.splice(index, 1);
+  }
+
+  onRegister(){
+    console.log(this.onRegister)
   }
 }
